@@ -5,6 +5,10 @@
 ####  0 (pending), 16 (running), 32 (shutting-down), 48 (terminated), 64 (stopping), and 80 (stopped)
 
 
+## Note Use this to filter only the InstanceId field from 'aws ec2 describe-instance' call
+## aws ec2 describe-instances --filter Name=tag:Name,Values=MyAwesomeEc2Instance Name=instance-state-code,Values=16 | grep InstanceId | cut -d '"' -f4
+
+
 
 function abort {
   EXIT_VAL="$?"
