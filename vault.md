@@ -101,7 +101,8 @@ $ vault -autocomplete-install
 $ complete -C /usr/bin/vault vault
 ```
 
-#### If you need to RESET vault
+#### If you need to RESET vault  
+##### The 'vault operator init' command will output the keys [3-5]. Use keys to unseal the vault and a root token. Save the token for later.  
 ```bash
 $ sudo systemctl stop vault
 $ consul kv delete -recurse vault/
@@ -109,7 +110,6 @@ Success! Deleted keys with prefix: vault/
 $ sudo systemctl start vault 
 $ vault operator init
 ```
-##### The 'vault operator init' command will output the keys [3-5]. Use keys to unseal the vault and a root token. Save the token for later.  
 
 #### Use the keys to unseal the vault
 ```bash
